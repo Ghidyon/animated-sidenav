@@ -12,10 +12,11 @@ body {
 
 nav {
     position: fixed;
-    left: 0;
+    left: -250px;
     width: 250px;
     height: 100%;
     background: #042331;
+    transition: all .5s ease;
 }
 
 nav header {
@@ -46,4 +47,37 @@ nav ul li:hover a {
 
 nav ul li a i {
     margin-right: 16px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+label #view,
+label #close {
+    position: absolute;
+    background: #042331;
+    cursor: pointer;
+}
+
+label #view {
+    font-size: 35px;
+    color: white;
+    border-radius: 3px;
+    padding: 6px 12px;
+}
+
+label #close {
+    left: 150px;
+    font-size: 30px;
+    color: #0a5275;
+    background: #042331;
+    border-radius: 3px;
+    padding: 4px 9px;
+    z-index: 100;
+}
+
+/* Style affects nav element that is preceded by an input[type=checkbox] with the same parent */
+input[type=checkbox]:checked ~ nav {
+    left: 0;
 }
