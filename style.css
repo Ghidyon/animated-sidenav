@@ -62,7 +62,7 @@ label #close {
 
 label #view {
     left: 40px;
-    top: 25px;
+    top: 15px;
     font-size: 35px;
     color: white;
     border-radius: 3px;
@@ -71,13 +71,15 @@ label #view {
 }
 
 label #close {
-    left: 150px;
+    left: -190px;
+    top: 15px;
     font-size: 30px;
     color: #0a5275;
     background: #042331;
     border-radius: 3px;
     padding: 4px 9px;
     z-index: 100;
+    transition: all .5s ease;
 }
 
 /* Style affects nav element that is preceded by an input[type=checkbox] with the same parent */
@@ -89,4 +91,12 @@ input[type=checkbox]:checked ~ label #view {
     left: 250px;
     pointer-events: none;
     opacity: 0;
+} 
+
+input[type=checkbox]:checked ~ label #close {
+    left: 190px;
+}
+
+section {
+    
 }
