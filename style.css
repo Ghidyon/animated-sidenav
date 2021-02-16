@@ -61,10 +61,13 @@ label #close {
 }
 
 label #view {
+    left: 40px;
+    top: 25px;
     font-size: 35px;
     color: white;
     border-radius: 3px;
     padding: 6px 12px;
+    transition: all .5s ease;
 }
 
 label #close {
@@ -80,4 +83,10 @@ label #close {
 /* Style affects nav element that is preceded by an input[type=checkbox] with the same parent */
 input[type=checkbox]:checked ~ nav {
     left: 0;
+}
+
+input[type=checkbox]:checked ~ label #view {
+    left: 250px;
+    pointer-events: none;
+    opacity: 0;
 }
